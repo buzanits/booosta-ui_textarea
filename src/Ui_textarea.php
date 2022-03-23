@@ -52,7 +52,7 @@ class Ui_textarea extends \booosta\ui\UI
     $params = ['stopInputAtMaximum: true', 'countSpaces: true', 'countDown: true'];
     if($this->max) $params[] = "max: $this->max";
     if($this->message) $params[] = "maximumErrorText: '$this->message'";
-    if($this->counttext) $params[] = "countDownText: '$this->counttext'";
+    if($this->counttext) $params[] = "countDownText: '$this->counttext %d'";
     $paramstr = implode(',', $params);
 
     if(is_object($this->topobj) && is_a($this->topobj, "\\booosta\\webapp\\webapp")):
